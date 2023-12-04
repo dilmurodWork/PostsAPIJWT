@@ -25,7 +25,9 @@ REST_FRAMEWORK = {
 }
 
 ```
+
 3. `config/urls.py`
+
 ```python
 from rest_framework_simplejwt.views import (
     TokenObtainPairView,
@@ -39,8 +41,11 @@ urlpatterns = [
     path('api/token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
     path('api/token/verify/', TokenVerifyView.as_view(), name='token_refresh'),
     ...
-]```
-4. 
+]
+
+```
+
+4. `config/settings.py`
 ```python
 from datetime import timedelta
 ...
